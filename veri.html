@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gönderilen Veriler</title>
+</head>
+<body>
+    <h1>Formdan Gelen Veriler</h1>
+    <nav>
+        <a href="index.html">Ana Sayfa</a> |
+        <a href="hakkimizda.html">Hakkımızda</a> |
+        <a href="hizmetler.html">Hizmetler</a> |
+        <a href="galeri.html">Galeri</a> |
+        <a href="iletisim.html">İletişim</a> |
+        <a href="form.html">Form</a> |
+        <a href="veri.html">Veri</a>
+    </nav>
+    <hr>
+    <script>
+        const url = new URLSearchParams(window.location.search);
+        document.write('<p><strong>Ad:</strong> ' + url.get("isim") + '</p>');
+        document.write('<p><strong>Email:</strong> ' + url.get("email") + '</p>');
+        document.write('<p><strong>Mesaj:</strong> ' + url.get("mesaj") + '</p>');
+    </script>
+</body>
+</html>

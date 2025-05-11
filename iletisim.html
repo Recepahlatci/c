@@ -1,13 +1,97 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>İletişim</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim | AHLATCI OTOMOTİV</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>İletişim</h1>
-    <nav> ... </nav>
-    <p>Adres: Çorum Merkez, Ankara Cad. No:10</p>
-    <iframe src="https://maps.google.com/maps?q=çorum&t=&z=13&ie=UTF8&iwloc=&output=embed" width="400" height="300"></iframe>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>AHLATCI OTOMOTİV</h1>
+    <ul>
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="hizmetler.html">Hizmetler</a></li>
+      <li><a href="araclar.html">Araçlar</a></li>
+      <li><a href="kampanyalar.html">Kampanyalar</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="referanslar.html">Referanslar</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a href="kayitformu.html">Kayıt Ol</a></li>
+       <li><a href="kayitlar.html">Kayıtlar</a></li>
+    </ul>
+  </nav>
+
+  <!-- Saat -->
+  <div class="saat" id="saat"></div>
+
+  <!-- Ana İçerik -->
+  <main>
+    <h2>İletişim Bilgilerimiz</h2>
+
+    <section class="iletisim-info">
+      <h3>Adres</h3>
+      <p>Örnek Mahallesi, Örnek Sokak No:123, İstanbul, Türkiye</p>
+
+      <h3>Telefon</h3>
+      <p>+90 212 123 45 67</p>
+
+      <h3>E-posta</h3>
+      <p>iletisim@ahlatciotomotiv.com</p>
+
+      <h3>Çalışma Saatlerimiz</h3>
+      <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+      <p>Cumartesi: 10:00 - 15:00</p>
+      <p>Pazar: Kapalı</p>
+    </section>
+
+    <h2>Bize Ulaşın</h2>
+
+    <!-- İletişim Formu -->
+    <form id="contact-form">
+      <label for="name">Adınız:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Mesajınız:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Mesaj Gönder</button>
+    </form>
+
+    <!-- Mesaj Gönderildi Uyarısı -->
+    <div id="message-status"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 AHLATCI OTOMOTİV | Tüm hakları saklıdır.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Formun sayfayı yenilemesini engelliyoruz.
+
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      // Basit bir mesaj gönderim işlemi simülasyonu
+      if (name && email && message) {
+        document.getElementById("message-status").innerHTML = "<p>Mesajınız başarıyla gönderildi!</p>";
+        document.getElementById("message-status").style.color = "green";
+      } else {
+        document.getElementById("message-status").innerHTML = "<p>Lütfen tüm alanları doldurun.</p>";
+        document.getElementById("message-status").style.color = "red";
+      }
+    });
+  </script>
+
 </body>
 </html>

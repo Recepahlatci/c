@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayıt Formu</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/myscript.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+            <h1>AHLATCI OTOMOTİV</h1>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="araclar.html">Araçlar</a></li>
+                <li><a href="kampanyalar.html">Kampanyalar</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="referanslar.html">Referanslar</a></li>
+                <li><a href="kayitformu.html">Kayıt Ol</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                 <li><a href="kayitlar.html">Kayıtlar</a></li>
+            </ul>
+        </nav>
+    <main>
+        <h1>Kayıt Formu</h1>
+        <form id="kayitFormu">
+            <label for="ad">Ad</label>
+            <input type="text" id="ad" name="ad" required />
+
+            <label for="soyad">Soyad</label>
+            <input type="text" id="soyad" name="soyad" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <button type="submit">Kaydol</button>
+        </form>
+        <p id="successMessage" style="color: green; display: none;">Kayıt başarıyla alındı!</p>
+    </main>
+</body>
+</html>

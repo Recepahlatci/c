@@ -1,0 +1,169 @@
+/* Genel resetleme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Tüm elemanların kutu modelini eşit hale getirir */
+}
+
+body {
+  font-family: 'Arial', sans-serif; /* Yazı tipi ailesini Arial ve sans-serif olarak belirledik */
+  line-height: 1.6; /* Satır aralığı */
+  background-color: #f1f1f1; /* Sayfa arka planını çok açık gri yapıyoruz */
+  color: #333; /* Yazı rengini koyu gri yapıyoruz, siyah yerine daha yumuşak bir ton */
+}
+
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif; /* Başlıklar için de Arial yazı tipi kullanıyoruz */
+  color: #333; /* Başlık rengi koyu gri */
+}
+
+nav {
+  background-color: #2c3e50; /* Navbar'ın arka plan rengini koyu mavi-grinin tonunda yapıyoruz */
+  color: #ecf0f1; /* Navbar metin rengini açık gri yapıyoruz */
+  padding: 15px 0; /* Navbar'ın üst ve alt kısmına 15px padding ekliyoruz */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Navbar'a hafif gölge efekti */
+}
+
+nav h1 {
+  text-align: center; /* Navbar başlığını ortaya hizalıyoruz */
+  font-size: 24px; /* Başlık boyutunu büyütüyoruz */
+}
+
+ul {
+  list-style: none; /* Liste işaretlerini kaldırıyoruz */
+  display: flex; /* Menü elemanlarını yatayda sıralıyoruz */
+  justify-content: center; /* Menü elemanlarını yatayda ortalıyoruz */
+}
+
+ul li {
+  margin: 0 20px; /* Menü elemanları arasına yatayda 20px boşluk ekliyoruz */
+}
+
+ul li a {
+  text-decoration: none; /* Bağlantıların altını çizmekten kaçınıyoruz */
+  color: #ecf0f1; /* Bağlantı rengini açık gri yapıyoruz */
+  font-weight: bold; /* Bağlantı metnini kalın yapıyoruz */
+  font-size: 18px; /* Bağlantı metninin boyutunu artırıyoruz */
+}
+
+ul li a:hover {
+  color: #3498db; /* Bağlantı üzerine gelindiğinde rengini mavi yapıyoruz */
+  text-decoration: underline; /* Bağlantıya gelindiğinde altını çiziyoruz */
+}
+
+/* Saat */
+.saat {
+  font-size: 22px;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  margin-top: 20px;
+}
+
+/* Ana İçerik */
+main {
+  padding: 30px;
+  background-color: #fff; /* Ana içerik için beyaz arka plan */
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 8px; /* Köşeleri yuvarlıyoruz */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* İçeriğe gölge efekti ekliyoruz */
+}
+
+/* Form Stilleri */
+form {
+  display: grid; /* Form elemanlarını grid düzeninde sıralıyoruz */
+  grid-template-columns: 1fr; /* Sadece bir sütun oluşturuyoruz */
+  gap: 15px; /* Elemanlar arasında 15px boşluk bırakıyoruz */
+  max-width: 600px;
+  margin: 0 auto; /* Formu ortalıyoruz */
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+}
+
+input, textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%; /* Genişliği %100 yapıyoruz */
+}
+
+input[type="number"], input[type="text"], input[type="email"] {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 160px; /* Textarea boyutunu artırıyoruz */
+}
+
+button {
+  background-color: #3498db; /* Buton arka planını mavi yapıyoruz */
+  color: white; /* Buton yazı rengi beyaz */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Buton üzerine gelindiğinde el simgesi çıkar */
+  font-size: 18px;
+  transition: background-color 0.3s ease; /* Hover efekti için geçiş efekti ekliyoruz */
+}
+
+button:hover {
+  background-color: #2980b9; /* Butona gelindiğinde rengini koyu mavi yapıyoruz */
+}
+
+/* Tablo Stilleri */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Tablo hücrelerinin kenarlıklarını birbirine kaynaştırıyoruz */
+  margin-top: 30px;
+}
+
+table th, table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #2c3e50;
+  color: white; /* Başlık hücrelerinin rengini beyaz yapıyoruz */
+}
+
+table td {
+  background-color: #f9f9f9; /* Hücrelerin arka plan rengini açık gri yapıyoruz */
+}
+
+table tr:nth-child(even) td {
+  background-color: #ecf0f1; /* Her çift satırın rengini farklı yapıyoruz */
+}
+
+table tr:hover {
+  background-color: #f1f1f1; /* Satır üzerine gelindiğinde arka plan rengini değiştiriyoruz */
+}
+
+/* Responsive Tasarım */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Menü elemanlarını dikey yapıyoruz */
+    align-items: center; /* Menü elemanlarını ortalıyoruz */
+  }
+
+  form {
+    width: 90%; /* Formu daha dar yapıyoruz */
+  }
+
+  table {
+    font-size: 14px; /* Tabloyu daha küçük yapıyoruz */
+  }
+
+  footer {
+    font-size: 14px; /* Footer yazı boyutunu küçültüyoruz */
+  }
+}
